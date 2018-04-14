@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
         final TextView registrationBtn = findViewById(R.id.liRegistrationLink);
         registrationBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),R.string.available_soon,Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getApplicationContext(),RegistrationActivity.class);
                 startActivity(i);
             }
@@ -38,7 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         final ImageView infoImgBtn = findViewById(R.id.liInfoImage);
         infoImgBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),R.string.available_soon,Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),InfoActivity.class);
+                startActivity(i);
             }
         });
 
