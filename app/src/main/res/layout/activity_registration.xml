@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    tools:context=".RegistrationActivity"
+    android:background="@drawable/dwarf_warrior">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        app:srcCompat="@drawable/nerdr_logo_large" />
+
+
+    <EditText
+        android:id="@+id/reUsernameText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableRight="@drawable/avatar"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:padding="3dp" />
+
+    <EditText
+        android:id="@+id/rePasswordText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/reUsernameText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableRight="@drawable/lock"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="3dp" />
+
+    <EditText
+        android:id="@+id/reEmail"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rePasswordText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableRight="@drawable/email_at"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="3dp" />
+
+    <RadioButton
+        android:id="@+id/reMaleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reEmail"
+        android:layout_alignLeft="@+id/reEmail"
+        android:text="Male"
+        android:textColor="@color/colorWhite"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginTop="10dp"
+        />
+
+    <RadioButton
+        android:id="@+id/reFemaleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/reEmail"
+        android:layout_below="@+id/reEmail"
+        android:text="Female"
+        android:textColor="@color/colorWhite"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginTop="10dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/reCountryAC"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reMaleBtn"
+        android:layout_centerHorizontal="true"
+        android:hint="Country"
+        android:drawableRight="@drawable/earth"
+        android:background="@drawable/rounded_edittext"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/reCityMAC"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/reCountryAC"
+        android:layout_centerHorizontal="true"
+        android:hint="City" />
+
+
+    <Button
+        android:id="@+id/reLoginBtn"
+        android:layout_width="250dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/reEmail"
+        android:layout_marginTop="150dp"
+        android:background="@color/colorAccent"
+        android:text="Register"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

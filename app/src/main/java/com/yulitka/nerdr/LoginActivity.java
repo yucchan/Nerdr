@@ -1,6 +1,7 @@
 package com.yulitka.nerdr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -28,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
         final TextView registrationBtn = findViewById(R.id.liRegistrationLink);
         registrationBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),R.string.available_soon,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),R.string.available_soon,Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),RegistrationActivity.class);
+                startActivity(i);
             }
         });
 
